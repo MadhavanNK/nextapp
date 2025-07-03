@@ -1,3 +1,4 @@
+"use client"
 import { House } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -13,5 +14,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default withAuth(page);
 

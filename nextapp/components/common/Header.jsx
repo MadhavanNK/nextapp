@@ -1,11 +1,31 @@
-const Header = ({ profile }) => {
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { SignInWithGoogle } from "@/firebase";
+
+const Header = () => {
+  
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-100 shadow">
-      <h1 className="text-xl font-semibold text-blue-600">Logo</h1>
-      <p className="text-sm text-gray-700">Welcome, {profile}</p>
-    </div>
+    <header className="flex items-center justify-between px-8 py-4 shadow-md bg-red">
+      
+      <div className="text-xl font-bold">Logo</div>
+
+    
+      <nav className="flex gap-6">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/blog">Blog</Link>
+      </nav>
+
+    
+      <button onClick={SignInWithGoogle}className="border px-4 py-2 rounded hover:bg-red-500 transition">
+         Sign in with Google
+      </button>
+    </header>
   );
 };
 
 export default Header;
+
 
