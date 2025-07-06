@@ -41,4 +41,3 @@ import { auth } from '@/firebase';
  
  export default Homepage
  
-
